@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="">
+  <head>
+    <meta charset="utf-8">
+    <title>Mayor's Office | Gotham.gov</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../mystyles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="">
+    <nav class="z-50 flex items-center justify-between flex-wrap p-6 shadow-md sticky pin-t">
+      <img src="../img/gothamcity.jpg" alt="gotham city emblem" class="h-10 hidden lg:block lg:absolute md:mr-3"><span class="font-semibold text-2xl md:text-xl lg:ml-10 lg:pl-3 tracking-tight"><a href="../index.html" class="no-underline">Gotham City</a></span> <span class="text-xl tracking-tight ml-2 hidden lg:block">| <a href="mayor.html" class="no-underline hover:text-red">Mayor Hamilton Hill</a></span>
+      <div class="md:hidden">
+        <button onclick="showMenu()"><i id="hamburger" class="fas fa-bars text-2xl"></i></button>
+      </div>
+      <div id="menu" class="w-full text-right flex-col md:flex-row md:flex-grow hidden md:relative md:flex md:items-center md:w-auto">
+        <div class="text-sm md:flex-grow">
+          <a href="311.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            311
+          </a>
+          <a href="public-notices.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            PUBLIC NOTICES
+          </a>
+          <a href="departments.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            DEPARTMENTS
+          </a>
+          <span class="text-black"><span class="hidden lg:inline-block font-bold rounded-sm p-1">ACCESSIBILITY :</span><button id="decreaseFont" class="rounded-sm px-1 hover:text-red text-black">-A</button> <button id="increaseFont" class="rounded-sm hover:text-red text-black">+A</button>
+          </span>
+          <button data-switch-contrast aria-hidden class="mt-4 md:inline-block md:mt-0 rounded p-1 hover:text-red"><i id='nightmodebutton' class='fas fa-moon'></i></button>
+        </div>
+      </div>
+    </nav>
+    <div class="mx-auto mt-10" style="width:85%;">
+      <div class="hidden md:block">
+        <div class="pb-2 text-grey text-xs" style="border-bottom: 2px dotted lightgray;">
+          <a class="text-gotham-blue hover:text-red no-underline text-sm pr-2" href="../index.html">HOME</a> > <span class="text-red text-sm pl-2 pr-2">DEPARTMENTS</a>
+        </div>
+      </div>
+        <div class="mt-10 mb-10">
+          <div class="text-4xl font-bold mb-10" style="border-bottom: 8px solid black;">DEPARTMENTS</div>
+          <div class="px-2">
+            <div class="flex flex-wrap -mx-2">
+              <div class="w-1/2 mb-4 md:w-1/3 px-2">
+                <a href="311.html" class="bg-grey-lighter hover:bg-gotham-blue h-16 flex items-center pl-5 text-sm text-gotham-blue hover:text-white no-underline">311</a>
+              </div>
+              <div class="w-1/2 mb-4 md:w-1/3 px-2">
+                <a href="mayor.html" class="bg-grey-lighter hover:bg-gotham-blue h-16 flex items-center pl-5 text-sm text-gotham-blue hover:text-white no-underline">MAYOR'S OFFICE</a>
+              </div>
+              <div class="w-1/2 mb-4 md:w-1/3 px-2">
+                <a href="parks-and-recreation.html" class="bg-grey-lighter hover:bg-gotham-blue h-16 flex items-center pl-5 text-sm text-gotham-blue hover:text-white no-underline">PARKS AND RECREATION</a>
+              </div>
+              <div class="w-1/2 mb-4 md:w-1/3 px-2">
+                <a href="police.html" class="bg-grey-lighter hover:bg-gotham-blue h-16 flex items-center pl-5 text-sm text-gotham-blue hover:text-white no-underline">POLICE</a>
+              </div>
+              <div class="w-1/2 mb-4 md:w-1/3 px-2">
+                <a href="recovery-services.html" class="bg-grey-lighter hover:bg-gotham-blue h-16 flex items-center pl-5 text-sm text-gotham-blue hover:text-white no-underline">RECOVERY SERVICES</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="w-full sticky pin-b pt-2 pb-1 bg-red">
+      <marquee class="news" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+
+      </marquee>
+    </div>
+    <footer class="bg-black text-gotham-blue pin-b">
+      footer text<br>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam erat lorem, efficitur nec ante ultrices, dignissim sollicitudin nibh. Maecenas ullamcorper odio dapibus tincidunt aliquet. Phasellus mollis metus a massa vestibulum molestie. Etiam pellentesque, justo vel euismod auctor, eros enim ultricies sem, ac porttitor sapien nisi ac odio. Etiam interdum massa non fermentum ultricies.
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="../script.js"></script>
+</html>

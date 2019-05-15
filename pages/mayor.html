@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="">
+  <head>
+    <meta charset="utf-8">
+    <title>Mayor's Office | Gotham.gov</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../mystyles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="">
+    <nav class="z-50 flex items-center justify-between flex-wrap p-6 shadow-md sticky pin-t">
+      <img src="../img/gothamcity.jpg" alt="gotham city emblem" class="h-10 hidden lg:block lg:absolute md:mr-3"><span class="font-semibold text-2xl md:text-xl lg:ml-10 lg:pl-3 tracking-tight"><a href="../index.html" class="no-underline">Gotham City</a></span> <span class="text-xl tracking-tight ml-2 hidden lg:block">| <a href="mayor.html" class="no-underline hover:text-red">Mayor Hamilton Hill</a></span>
+      <div class="md:hidden">
+        <button onclick="showMenu()"><i id="hamburger" class="fas fa-bars text-2xl"></i></button>
+      </div>
+      <div id="menu" class="w-full text-right flex-col md:flex-row md:flex-grow hidden md:relative md:flex md:items-center md:w-auto">
+        <div class="text-sm md:flex-grow">
+          <a href="311.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            311
+          </a>
+          <a href="public-notices.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            PUBLIC NOTICES
+          </a>
+          <a href="departments.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            DEPARTMENTS
+          </a>
+          <span class="text-black"><span class="hidden lg:inline-block font-bold rounded-sm p-1">ACCESSIBILITY :</span><button id="decreaseFont" class="rounded-sm px-1 hover:text-red text-black">-A</button> <button id="increaseFont" class="rounded-sm hover:text-red text-black">+A</button>
+          </span>
+          <button data-switch-contrast aria-hidden class="mt-4 md:inline-block md:mt-0 rounded p-1 hover:text-red"><i id='nightmodebutton' class='fas fa-moon'></i></button>
+        </div>
+      </div>
+    </nav>
+    <div class="mx-auto mt-10" style="width:85%;">
+      <div class="hidden md:block">
+        <div class="pb-2 text-grey text-xs" style="border-bottom: 2px dotted lightgray;">
+          <a class="text-gotham-blue hover:text-red no-underline text-sm pr-2" href="../index.html">HOME</a> > <a class="text-gotham-blue hover:text-red no-underline text-sm pl-2 pr-2" href="departments.html">DEPARTMENTS</a> > <span class="text-red text-sm pl-2 pr-2">MAYOR'S OFFICE</a>
+        </div>
+      </div>
+      <div class="mt-10 mb-10">
+        <div class="text-6xl mb-10 text-black leading-none">
+          MAYOR'S<br>
+          OFFICE
+        </div>
+        <div class="text-2xl mb-10">
+          Gotham City is governed by Mayor Hamilton Hill and the City Council with the assistance of various departments, agencies, and commissions.
+        </div>
+        <a target="_blank" href="https://dc.fandom.com/wiki/Hamilton_Hill" class="text-4xl no-underline font-bold text-gotham-blue group hover:text-red">
+          MEET THE MAYOR <i class="fas fa-external-link-alt text-white group-hover:text-grey text-lg align-middle"></i>
+        </a>
+        <div class="clearfix">
+          <div class="w-full mt-10 mb-5 md:mb-0 md:float-left md:w-1/4">
+            <img src="../img/hamiltonhill.jpg" alt="Hamilton Hill" class="rounded-full">
+          </div>
+          <div class="mt-10 md:float-left md:pl-3 md:h-48 md:flex md:items-center md:w-3/4 text-xl">
+            <p>
+            Mayor Hamilton Hill is an accomplished advocate for working people and a proud product of Gotham City. He supported the building of <a href="#" class="no-underline text-gotham-blue hover:text-red">Stonegate Penitentiary</a> with sponsorship from the <a href="#" class="no-underline text-gotham-blue hover:text-red">Wayne Foundation</a>, as well as the dedication of a new courthouse and improved public transport.<br><br>
+            <span class="group"><a target="_blank" href="https://dc.fandom.com/wiki/Hamilton_Hill" class="no-underline text-gotham-blue hover:text-red">Learn more about Mayor Hill</a>. <i class="fas fa-external-link-alt text-white group-hover:text-grey text-base align-baseline"></i></p></span>
+          </div>
+        </div>
+      </div>
+      <div class="text-xl pb-2" style="border-bottom: 2px dotted lightgray;">
+        CONTACT
+      </div>
+      <div class="pt-5 pb-5 flex flex-row items-center" style="border-bottom: 2px dotted lightgray;">
+        <i class="fas fa-phone-square fa-2x w-16 text-black"></i> <a href="../request/index.html" class="no-underline text-gotham-blue hover:text-red">786-519-3708</a>
+      </div>
+      <div class="pt-5 pb-5 flex flex-row items-center" style="border-bottom: 2px dotted lightgray;">
+        <i class="fas fa-envelope fa-2x w-16 text-black"></i> <a href="../request/index.html" class="no-underline text-gotham-blue hover:text-red">mayor@gotham.gov</a>
+      </div>
+      <div class="mb-10 pt-5 pb-5 flex flex-row items-center" style="border-bottom: 2px dotted lightgray;">
+        <i class="far fa-clock fa-2x w-16 text-black"></i> <span>Monday through Friday, 9 am to 5 pm</span>
+      </div>
+    </div>
+    <div class="w-full sticky pin-b pt-2 pb-1 bg-red">
+      <marquee class="news" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+
+      </marquee>
+    </div>
+    <footer class="bg-black text-gotham-blue pin-b">
+      footer text<br>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam erat lorem, efficitur nec ante ultrices, dignissim sollicitudin nibh. Maecenas ullamcorper odio dapibus tincidunt aliquet. Phasellus mollis metus a massa vestibulum molestie. Etiam pellentesque, justo vel euismod auctor, eros enim ultricies sem, ac porttitor sapien nisi ac odio. Etiam interdum massa non fermentum ultricies.
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="../script.js"></script>
+</html>

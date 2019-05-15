@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="">
+  <head>
+    <meta charset="utf-8">
+    <title>Gotham.gov</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <body class="">
+    <nav class="z-50 flex items-center justify-between flex-wrap p-6 shadow-md sticky pin-t">
+      <img src="img/gothamcity.jpg" alt="gotham city emblem" class="h-10 hidden lg:block lg:absolute md:mr-3"><span class="font-semibold text-2xl md:text-xl lg:ml-10 lg:pl-3 tracking-tight"><a href="index.html" class="no-underline">Gotham City</a></span> <span class="text-xl tracking-tight ml-2 hidden lg:block">| <a href="pages/mayor.html" class="no-underline hover:text-red">Mayor Hamilton Hill</a></span>
+      <div class="md:hidden">
+        <button onclick="showMenu()"><i id="hamburger" class="fas fa-bars text-2xl hover-text-red"></i></button>
+      </div>
+      <div id="menu" class="w-full text-right flex-col md:flex-row md:flex-grow hidden md:relative md:flex md:items-center md:w-auto">
+        <div class="text-sm md:flex-grow">
+          <a href="pages/311.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            311
+          </a>
+          <a href="pages/public-notices.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            PUBLIC NOTICES
+          </a>
+          <a href="pages/departments.html" class="w-full block md:w-auto mt-4 md:inline-block md:mt-0 mr-3 no-underline rounded p-1 hover:text-red">
+            DEPARTMENTS
+          </a>
+          <span class="text-black"><span class="hidden lg:inline-block font-bold rounded-sm p-1">ACCESSIBILITY :</span><button id="decreaseFont" class="rounded-sm px-1 hover:text-red text-black">-A</button> <button id="increaseFont" class="rounded-sm hover:text-red text-black">+A</button>
+          </span>
+          <button data-switch-contrast aria-hidden class="mt-4 md:inline-block md:mt-0 rounded p-1 hover:text-red"><i id='nightmodebutton' class='fas fa-moon'></i></button>
+        </div>
+      </div>
+    </nav>
+    <div class="z-10 w-full text-center text-white">
+      <div class="" style="background-image: url('img/gotham3.jpg'); height: 245px; background-repeat: no-repeat; background-attachment:fixed;">
+        <div class="text-2xl italic pt-20 md:pt-16">welcome to</div>
+        <div class="font-black text-5xl md:text-6xl">GOTHAM.GOV</div>
+      </div>
+    </div>
+    <!-- <div class="block">
+      <div id="dateBar" class="absolute z-20" style="border-top:8px solid black; left: 7.5%; top: 47%; width: 85%;">
+      </div>
+      <div id="dateContainer" class="absolute z-30" style="top:46%; left: 30%; width: 40%;">
+        <div id="date" class="pl-2 pr-2 font-bold text-xl md:text-2xl" style="width: max-content; margin: auto; text-transform: uppercase">
+        </div>
+      </div>
+    </div> -->
+    <div class="mx-auto mt-10 mb-5 flex align-center items-center" style="width:85%;">
+      <div class="w-1/4 md:w-1/3 bg-black text-xs" style="height:8px;"></div>
+      <div id="dateContainer" class="w-2/4 md:w-1/3"><div id="date" class="pl-1 pr-2 font-bold text-lg md:text-2xl" style="width: max-content; margin: auto; text-transform: uppercase">
+      </div></div>
+      <div class="w-1/4 md:w-1/3 bg-black text-xs" style="height:8px;"></div>
+    </div>
+    <div class="flex mb-5 ml-auto mr-auto pb-5" style="height: auto; width: 85%;">
+      
+      <a href="#" class="group no-underline align-top text-center p-5 w-1/5">
+        <i class="fas fa-car group-hover:text-gotham-blue fa-2x h-12"></i><br>
+        <div class="text-gotham-blue group-hover:underline mt-2">STREET CLEANING</div>
+        <div class="italic mt-5">
+          City rules and regulations are in effect today.
+        </div>
+      </a>
+      <a href="#" class="group no-underline align-top text-center p-5 w-1/5">
+        <i class="fas fa-cloud group-hover:text-gotham-blue fa-2x h-12"></i><br>
+        <div class="text-gotham-blue group-hover:underline mt-2">WEATHER</div>
+        <div class="italic mt-5">
+          Overcast, 65 degrees. 20% chance of rain.
+        </div>
+      </a>
+      <a href="#" class="group no-underline align-top text-center p-5 w-1/5">
+        <i class="fas fa-university group-hover:text-gotham-blue fa-2x h-12"></i><br>
+        <div class="text-gotham-blue group-hover:underline mt-2">CITY BUILDING HOURS</div>
+        <div class="italic mt-5">
+          All municipal buildings are open based on their normal hours.
+        </div>
+      </a>
+      <a href="#" class="group no-underline align-top text-center p-5 w-1/5">
+        <i class="fas fa-adjust group-hover:text-gotham-blue fa-2x h-12"></i><br>
+        <div class="text-gotham-blue group-hover:underline mt-2">THREAT LEVEL</div>
+        <div class="italic mt-5">
+          The city-wide threat level is medium.
+        </div>
+      </a>
+      <a href="#" class="group no-underline align-top text-center p-5 w-1/5">
+        <i class="fas fa-exclamation-circle group-hover:text-gotham-blue fa-2x h-12"></i><br>
+        <div class="text-gotham-blue group-hover:underline mt-2">BAT-SIGNAL</div>
+        <div class="italic mt-5">
+          The signal was last activated 20 hours ago by Commissioner Gordon.
+        </div>
+      </a>
+    </div>
+    <div class="bg-black text-center" style="height: 100px;">
+      <div class="text-red pt-5">
+        LEAF AND YARD WASTE PICKUP STARTS SOON
+      </div>
+      <div class="italic text-white pt-1">
+        We collect leaf and yard waste this week across Gotham City.<br>
+      </div>
+      <div class="italic text-white pt-1">
+        <a href="request/index.html" class="text-gotham-blue">Check the schedule</a>
+      </div>
+    </div>
+    <div class="bg-grey-lighter pt-16 pb-20">
+      <div class="" style="width: 85%; margin: auto">
+        <div class="w-full mb-6 text-4xl font-bold" style="border-bottom: 8px solid black;">
+          LATEST NEWS
+        </div>
+        <a href="request/index.html" class="flex group no-underline">
+          <div class="w-1/5 bg-black text-white text-xl flex justify-center pt-6 font-bold uppercase" style="height:9rem; background-image: url('img/swampthing.jpg');">
+          </div>
+          <div class="w-4/5 bg-white text-xl text-gotham-blue italic group-hover:bg-gotham-blue group-hover:text-white px-5 pt-6">
+            Swamp Thing Attacks Robert H. Kane Memorial Bridge
+          </div>
+        </a>
+        <a href="request/index.html" class="flex group no-underline mt-6">
+          <div class="h-32 w-1/5 bg-black text-white text-xl flex justify-center pt-6 font-bold uppercase" style="height:9rem; background-image:url('img/crimealley.jpg');">
+          </div>
+          <div class="w-4/5 bg-white text-xl text-gotham-blue italic group-hover:bg-gotham-blue group-hover:text-white px-5 pt-6">
+            Recession Grips City As Businesses Close
+          </div>
+        </a>
+        <a href="request/index.html" class="flex group no-underline mt-6 mb-10">
+          <div class="w-1/5 bg-black text-white text-xl flex justify-center pt-6 font-bold uppercase" style="height:9rem; background-image:url('img/brucewayne.jpg');">
+          </div>
+          <div class="w-4/5 bg-white text-xl text-gotham-blue italic group-hover:bg-gotham-blue group-hover:text-white px-5 pt-6">
+            Can C.E.O. Bruce Wayne Handle the Pressure?
+          </div>
+        </a>
+        <a target="_blank" href="https://youtu.be/d4L_lOLfJWU?t=80" class="flex group no-underline mt-6 mb-10">
+          <div class="w-1/5 bg-black text-white text-xl flex justify-center pt-6 font-bold uppercase" style="height:9rem; background-image:url('');>
+          </div>
+          <div class="w-4/5 bg-white text-xl text-gotham-blue italic group-hover:bg-gotham-blue group-hover:text-white px-5 pt-6">
+            Animal Rights Celebrity Auction: Live Stream
+          </div>
+        </a>
+        <a target="_blank" href="https://twitter.com/gothamheadlines?lang=en" class="group no-underline bg-gotham-blue hover:bg-red text-white no-underline pl-10 py-5 font-bold">MORE CITY NEWS <i class="pl-5 pr-4 fas fa-external-link-alt text-black group-hover:text-white text-lg align-middle"></i></a>
+      </div>
+      <div class="" style="width: 85%; margin: auto">
+        <div class="w-full mt-20 mb-6 text-4xl font-bold" style="border-bottom: 8px solid black;">
+          UPCOMING EVENTS
+        </div>
+        <a href="request/index.html" class="flex group no-underline">
+          <div class="tomorrow w-1/5 bg-black text-white text-xl flex justify-center pt-6 font-bold uppercase" style="height:9rem;">
+          </div>
+          <div class="w-4/5 bg-white text-xl text-gotham-blue italic group-hover:bg-gotham-blue group-hover:text-white px-5 pt-6">
+            Park Row Restoration Project, Open House
+          </div>
+        </a>
+        <a href="request/index.html" class="flex group no-underline mt-6">
+          <div class="tomorrow h-32 w-1/5 bg-black text-white text-xl flex justify-center pt-6 font-bold uppercase" style="height:9rem;">
+          </div>
+          <div class="w-4/5 bg-white text-xl text-gotham-blue italic group-hover:bg-gotham-blue group-hover:text-white px-5 pt-6">
+            Solomon Wayne & Cyrus Pinkney: A Lineage of Downtown Architecture
+          </div>
+        </a>
+        <a href="request/index.html" class="flex group no-underline mt-6 mb-10">
+          <div class="tomorrow w-1/5 bg-black text-white text-xl flex justify-center pt-6 font-bold uppercase" style="height:9rem;">
+          </div>
+          <div class="w-4/5 bg-white text-xl text-gotham-blue italic group-hover:bg-gotham-blue group-hover:text-white px-5 pt-6">
+            Downtown Social Club Walking Tour of Giordano Botanical Gardens
+          </div>
+        </a>
+        <a href="request/index.html" class="bg-gotham-blue hover:bg-red text-white no-underline px-10 py-5 font-bold">FIND MORE EVENTS</a>
+      </div>
+      <div class="" style="width: 85%; margin: auto;">
+
+      </div>
+    </div>
+  </div>
+    <div class="w-full sticky pin-b pt-2 pb-1 bg-red">
+      <marquee class="news" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+
+      </marquee>
+    </div>
+    <footer class="bg-black text-gotham-blue pin-b">
+      footer text<br>
+      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam erat lorem, efficitur nec ante ultrices, dignissim sollicitudin nibh. Maecenas ullamcorper odio dapibus tincidunt aliquet. Phasellus mollis metus a massa vestibulum molestie. Etiam pellentesque, justo vel euismod auctor, eros enim ultricies sem, ac porttitor sapien nisi ac odio. Etiam interdum massa non fermentum ultricies.
+    </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Calculate today's date
+    var dateToday =  new Date();
+    var month = dateToday.getMonth();
+    var day = dateToday.getDate();
+    var dayOfWeek = dateToday.getDay();
+    var monthArray = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+    month = monthArray[month];
+    var dayArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    dayOfWeek = dayArray[dayOfWeek];
+    document.getElementById("date").innerHTML = dayOfWeek + ", " + month + " " + day;
+    // Input tomorrow's date for events
+    var tomorrow = document.getElementsByClassName("tomorrow");
+    for (var i = 0; i < tomorrow.length; i++) {
+      tomorrow[i].innerHTML = month + " " + (day + 1);
+    }
+  </script>
+</html>

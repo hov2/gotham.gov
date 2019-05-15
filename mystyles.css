@@ -1,0 +1,35 @@
+.text-blue-g {
+  color: #5b66e0;
+}
+
+body {
+  --color-page-background: white;
+  --color-primary-light: rgb(240,240,240);
+  --color-primary-dark: rgb(10,10,10);
+}
+.nightmode {
+  --color-page-background: rgb(76, 86, 106);
+  --color-primary-light: rgb(10,10,10);
+  --color-primary-dark: rgb(240,240,240);
+}
+/* * {
+  transition: all .05s ease-in;
+} */
+body {
+  background-color: var(--color-page-background);
+  color: var(--color-primary-dark);
+}
+nav {
+  background-color: var(--color-page-background);
+  color: var(--color-primary-dark);
+}
+a {
+  color: var(--color-primary-dark);
+}
+[data-switch-contrast] {
+  color: var(--color-primary-dark);
+}
+
+#date {
+  background-color: var(--color-page-background);
+}
