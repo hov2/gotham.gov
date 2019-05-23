@@ -28,17 +28,17 @@ function showMenu() {
 }
 
 // Toggle light/dark mode
-document.querySelector('[data-switch-contrast]').addEventListener('click', function() {
-  document.body.classList.toggle('nightmode');
-  if (document.querySelector('#nightmodebutton').classList.contains('fa-moon')) {
-    document.querySelector('[data-switch-contrast]').innerHTML = "<i id='nightmodebutton' class='fas fa-sun'></i>";
-  } else {
-    document.querySelector('[data-switch-contrast]').innerHTML = "<i id='nightmodebutton' class='fas fa-moon'></i>";
-  }
-});
+// document.querySelector('[data-switch-contrast]').addEventListener('click', function() {
+//   document.body.classList.toggle('nightmode');
+//   if (document.querySelector('#nightmodebutton').classList.contains('fa-moon')) {
+//     document.querySelector('[data-switch-contrast]').innerHTML = "<i id='nightmodebutton' class='fas fa-sun'></i>";
+//   } else {
+//     document.querySelector('[data-switch-contrast]').innerHTML = "<i id='nightmodebutton' class='fas fa-moon'></i>";
+//   }
+// });
 
 // Update news marquee
 var news = document.getElementsByClassName("news");
 for (var i = 0; i < news.length; i++) {
-  news[i].innerHTML = '<span class="text-xl md:text-base"><a href="#" class="no-underline text-white pr-10">BREAKING NEWS:</a><a href="#" class="no-underline text-white pr-10 hover:font-bold">SWAMP THING ATTACKS RHK MEMORIAL BRIDGE</a> <a target="_blank" href="https://www.youtube.com/watch?v=u94nG9UEIpQ" class="no-underline text-white hover:font-bold pr-10">JOKER ESCAPES ARKHAM ASYLUM, EVADES CAPTURE</a><a href="#" class="no-underline text-white hover:font-bold pr-10">ANCIENT CAT STATUE STOLEN</a><a href="#" class="no-underline text-white hover:font-bold pr-10">EXPLOSION AT ACE CHEMICALS INJURES TEN</a></span><a target="_blank" href="https://www.youtube.com/watch?v=otqWxjGqBd8&t=21s" class="no-underline text-white hover:font-bold pr-10">WINGED BEAST ATTACKS PHOENIX PHARMACEUTICALS</a></span>';
+  news[i].innerHTML = '<span class="text-2xl md:text-xl"><a href="#" class="no-underline text-white pr-10">BREAKING NEWS:</a><a href="https://www.youtube.com/watch?v=HCU5jZeZKn8" target="_blank" class="no-underline text-white pr-10 hover:font-bold">SWAMP THING ATTACKS RHK MEMORIAL BRIDGE</a> <a target="_blank" href="https://www.youtube.com/watch?v=u94nG9UEIpQ" class="no-underline text-white hover:font-bold pr-10">JOKER ESCAPES ARKHAM ASYLUM, EVADES CAPTURE</a><a href="#" class="no-underline text-white hover:font-bold pr-10">ANCIENT CAT STATUE STOLEN</a><a href="#" class="no-underline text-white hover:font-bold pr-10">EXPLOSION AT ACE CHEMICALS INJURES TEN</a></span><a target="_blank" href="https://www.youtube.com/watch?v=otqWxjGqBd8&t=21s" class="no-underline text-white hover:font-bold pr-10">WINGED BEAST ATTACKS PHOENIX PHARMACEUTICALS</a></span>';
 }
